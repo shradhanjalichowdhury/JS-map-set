@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Map_SET Question</h1>
+
+    <h2>1.Q1.	"Problem:
+        You are given a string (STR) of length N, consisting of only the lower case English alphabet.<br>
+        Your task is to remove all the duplicate occurrences of characters in the string.<br>
+        
+        Input:<br>
+        abcadeecfb<br>
+        
+        Output:<br>
+        abcdef"</h2>
+        <p>Ans. function remove1(str) {<br>
+            let result = '';<br>
+            const seenChars = new Set();<br>
+          
+            for (let char of str) {<br>
+              if (!seenChars.has(char)) {<br>
+                result += char;<br>
+                seenChars.add(char);<br>
+              }<br>
+            }<br>
+          
+            return result;<br>
+          }<br>
+          
+          const inpu = 'abcadeecfb';<br>
+          const outp = remove1(inpu);<br>
+          console.log(outp);<br>
+
+          Output:  abcdef
+        
+        Explain:  for Removing duplicate element in the list first we assign empty string to store value and after that we check<br>the duplicate element
+      if duplicate elemnt is found we remove it and If the character is not a duplicate, add it to the result string and add it to the set. return the upadted output. </p>
+
+
+      <h2>2: "Problem:
+        You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)<br>
+        
+        Input:<br>
+        abcadeecfb<br>
+        
+        Output:<br>
+        a=2<br>
+        b=2 <br>
+        c=2 <br>
+        d=1 <br>
+        e=2<br>
+        f=1 <br></h2>
+
+        <p>Ans:  the code is Here <br>
+            function count(str) { <br>
+                const charCountMap = new Map(); <br>
+              
+                for (let char of str) { <br>
+                  if (charCountMap.has(char)) { <br>
+                    charCountMap.set(char, charCountMap.get(char) + 1); <br>
+                  } else { <br>
+                    charCountMap.set(char, 1); <br>
+                  } <br>
+                } <br>
+                for (let [char, count] of charCountMap) { <br>
+                  console.log(`${char}=${count}`); <br>
+                } <br>
+              } <br>
+              
+              const input = 'abcadeecfb'; <br>
+              count(input); <br>
+
+              output:- <br>
+              a=2<br>
+              b=2 <br>
+              c=2 <br>
+              d=1 <br>
+              e=2<br>
+              f=1 <br>
+
+             Explain:  Taking about the this question in this question first we create a empty set  to store the update value .Inside the function, we initialize an empty object alphabetCount.<br> This object will be used to store the counts of each alphabet.
+             After the  check the pattern of word present in the string or word <br>, if present in the the string we count the word and store the the string  and print it.
+         </p>
+</body>
+</html>

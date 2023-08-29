@@ -1,0 +1,18 @@
+body{
+    padding: 10px;
+    background-color: darkgreen;
+    border-style: double;
+    
+}
+h1{
+    margin-left: 40%;
+    font-style: italic;
+    color: aqua;
+}
+h2{
+    margin-left: 12%;
+}
+p{
+    margin-left: 14%;
+    font-size: 24px;   
+}
